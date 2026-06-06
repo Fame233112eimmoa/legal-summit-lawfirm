@@ -78,28 +78,28 @@ export default function Home() {
           backgroundSize: 'cover',
         }}
       >
-        <div className="mx-auto flex min-h-screen max-w-7xl items-center px-6 pb-16 pt-44 sm:px-8 sm:pb-20 sm:pt-48 lg:items-end lg:px-10 lg:pb-14 lg:pt-44">
-          <div className="w-full py-10 sm:py-12 lg:py-0">
+        <div className="mx-auto flex min-h-screen max-w-7xl items-center px-6 pb-20 pt-48 sm:px-8 sm:pb-24 sm:pt-52 lg:items-end lg:px-10 lg:pb-14 lg:pt-44">
+          <div className="w-full py-12 sm:py-16 lg:py-0">
             <div className="max-w-[72rem]">
-              <div className="mb-10 mt-6 flex max-w-[24rem] items-center gap-5 sm:mb-12 sm:mt-8 sm:max-w-none">
+              <div className="mb-12 mt-10 flex max-w-[20rem] items-center gap-4 sm:mb-14 sm:mt-12 sm:max-w-none sm:gap-5">
                 <GoldLine />
-                <p className="text-base font-medium text-[#d7b46a] sm:text-[1.25rem]">
+                <p className="text-[0.95rem] font-medium leading-relaxed tracking-[0.03em] text-[#d7b46a] sm:text-[1.1rem] lg:text-[1.2rem]">
                   Dedicated to Ensuring Our Clients&apos; Success
                 </p>
               </div>
 
-              <h1 className="max-w-[20rem] font-serif text-[3.4rem] leading-[1.12] tracking-[-0.02em] text-white sm:max-w-[42rem] sm:text-[4.5rem] sm:leading-[1.08] lg:max-w-[60rem] lg:text-[6rem]">
+              <h1 className="max-w-[19rem] font-serif text-[46px] font-medium leading-[1.12] tracking-[-0.02em] text-white sm:max-w-[40rem] sm:text-[60px] sm:leading-[1.12] lg:max-w-[56rem] lg:text-[72px] lg:leading-[1.1]">
                 You need a dependable law firm to guide you through your legal matters with confidence.
               </h1>
             </div>
 
-            <div className="mt-20 border-t border-white/20 pt-10 sm:mt-24 sm:pt-12 lg:mt-20">
-              <div className="grid gap-12 md:grid-cols-2 md:gap-16">
+            <div className="mt-24 border-t border-white/20 pt-12 sm:mt-28 sm:pt-14 lg:mt-24">
+              <div className="grid gap-14 md:grid-cols-2 md:gap-16">
                 <div className="flex items-start gap-5">
                   <LocationIcon />
                   <div>
                     <p className="text-base font-semibold text-[#d7b46a]">Our Location</p>
-                    <p className="mt-4 font-serif text-[1.95rem] leading-tight text-white sm:text-[2.45rem]">
+                    <p className="mt-5 font-serif text-[1.95rem] leading-tight text-white sm:text-[2.45rem]">
                       Bristol, United Kingdom
                     </p>
                   </div>
@@ -109,7 +109,7 @@ export default function Home() {
                   <PhoneIcon />
                   <div>
                     <p className="text-base font-semibold text-[#d7b46a]">Free Review</p>
-                    <p className="mt-4 font-serif text-[1.95rem] leading-tight text-white sm:text-[2.45rem]">
+                    <p className="mt-5 font-serif text-[1.95rem] leading-tight text-white sm:text-[2.45rem]">
                       +44 20 7946 0958
                     </p>
                   </div>
