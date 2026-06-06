@@ -1,0 +1,12 @@
+.next
+.next-prod
+node_modules
+.vercel
+.DS_Store
+.clang-module-cache
+.swift-module-cache
+.home
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

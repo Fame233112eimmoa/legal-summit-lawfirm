@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #020202;
+  color: #f3ecde;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(201, 137, 45, 0.22);
+  color: #f8f2e7;
+}
+
+@layer components {
+  .section-label {
+    @apply text-sm font-semibold uppercase tracking-[0.26em] text-[#d6a84f];
+  }
+
+  .site-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 1.75rem;
+    box-shadow: 0 20px 60px rgba(2, 8, 18, 0.28);
+    backdrop-filter: blur(12px);
+  }
+
+  .site-card-solid {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0e0e0e;
+    border-radius: 1.75rem;
+    box-shadow: 0 20px 60px rgba(2, 8, 18, 0.28);
+  }
+
+  .site-card-soft {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #141414;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 60px rgba(2, 8, 18, 0.24);
+  }
+
+  .site-text-muted {
+    color: #cabba7;
+  }
+
+  .site-text-soft {
+    color: #a99880;
+  }
+}
