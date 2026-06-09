@@ -1,26 +1,21 @@
 import type { Metadata } from 'next';
-import { firmInfo } from './lib/site-data';
 import SiteFooter from './components/site-footer';
 import SiteHeader from './components/site-header';
 import './globals.css';
 
-const baseUrl = 'https://legalsummitlawfirm.com';
-
-const legalServiceSchema = {
+const schema = {
   '@context': 'https://schema.org',
   '@type': 'LegalService',
   name: 'Legal Summit Law Firm',
-  url: baseUrl,
-  logo: `${baseUrl}/legal-summit-logo.png`,
-  telephone: firmInfo.phone,
-  email: firmInfo.email,
+  url: 'https://legalsummitlawfirm.com',
+  logo: 'https://legalsummitlawfirm.com/logo.png',
+  telephone: '+1-725-238-1725',
+  email: 'info@legalsummitlawfirm.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Generator Building, Counterslip, Redcliffe',
-    addressLocality: 'Bristol',
-    postalCode: 'BS1 6BX',
-    addressCountry: 'GB',
+    addressCountry: 'United Kingdom',
   },
+  areaServed: 'United Kingdom',
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -29,11 +24,6 @@ const legalServiceSchema = {
       closes: '17:00',
     },
   ],
-  areaServed: {
-    '@type': 'Country',
-    name: 'United Kingdom',
-  },
-  sameAs: [baseUrl],
 };
 
 export const metadata: Metadata = {
@@ -58,7 +48,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(legalServiceSchema).replace(/</g, '\\u003c'),
+            __html: JSON.stringify(schema),
           }}
         />
       </head>
