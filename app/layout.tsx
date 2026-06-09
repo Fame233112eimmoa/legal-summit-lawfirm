@@ -43,9 +43,9 @@ const organizationSchema = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://legalsummitlawfirm.com'),
-  title: 'Legal Summit Law Firm | Solicitors in Bristol',
+  title: 'Legal Summit Law Firm | Solicitors & Legal Services',
   description:
-    'Legal Summit Law Firm provides clear, client-focused legal guidance from Bristol for individuals, families, and businesses across the United Kingdom.',
+    'Legal Summit Law Firm provides professional legal services, consultation, dispute resolution, corporate law, family law, and legal representation.',
   alternates: {
     canonical: '/',
   },

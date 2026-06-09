@@ -25,11 +25,11 @@ const testimonials = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Legal Summit Law Firm | Solicitors in Bristol',
+  title: 'Legal Summit Law Firm | Solicitors & Legal Services',
   description:
-    'Legal Summit Law Firm provides clear, client-focused legal guidance from Bristol for individuals, families, and businesses across the United Kingdom.',
+    'Legal Summit Law Firm provides professional legal services, consultation, dispute resolution, corporate law, family law, and legal representation.',
   alternates: {
-    canonical: '/',
+    canonical: 'https://legalsummitlawfirm.com/',
   },
 };
 
@@ -94,13 +94,20 @@ export default function Home() {
               <div className="mb-12 mt-10 flex max-w-[20rem] items-center gap-4 sm:mb-14 sm:mt-12 sm:max-w-none sm:gap-5">
                 <GoldLine />
                 <p className="text-[0.95rem] font-medium leading-relaxed tracking-[0.03em] text-[#d7b46a] sm:text-[1.1rem] lg:text-[1.2rem]">
-                  Dedicated to Ensuring Our Clients&apos; Success
+                  Solicitors, consultations, and legal representation shaped around your goals
                 </p>
               </div>
 
               <h1 className="max-w-[19rem] font-serif text-[46px] font-medium leading-[1.12] tracking-[-0.02em] text-white sm:max-w-[40rem] sm:text-[60px] sm:leading-[1.12] lg:max-w-[56rem] lg:text-[72px] lg:leading-[1.1]">
-                You need a dependable law firm to guide you through your legal matters with confidence.
+                Legal Summit Law Firm
               </h1>
+
+              <p className="mt-8 max-w-3xl text-lg leading-9 text-[#e6d7c1] sm:text-[1.18rem]">
+                Legal Summit Law Firm provides professional legal services for individuals, families, business owners, and organisations
+                seeking clear legal consultation, dispute resolution support, corporate law guidance, family law advice, and reliable
+                representation. We focus on practical next steps, careful preparation, and responsive communication so clients can move
+                forward with confidence when legal issues become urgent, sensitive, or commercially important.
+              </p>
             </div>
 
             <div className="mt-24 border-t border-white/20 pt-12 sm:mt-28 sm:pt-14 lg:mt-24">
@@ -141,19 +148,27 @@ export default function Home() {
             </div>
 
             <h2 className="mt-8 font-serif text-[2.9rem] leading-tight sm:text-[4rem]">
-              Legal Summit Law Firm
+              Professional legal services built around clarity and results
             </h2>
 
             <div className="mt-8 max-w-3xl space-y-6 text-lg leading-9 text-[#38302a] sm:text-[1.18rem]">
               <p>
-                Legal Summit Law Firm provides trusted legal guidance from Bristol for individuals, families, and businesses across
-                the United Kingdom. Our solicitors focus on clear advice, practical strategy, and dependable client support from the
-                first conversation through to resolution.
+                Legal Summit Law Firm supports clients across the United Kingdom with legal consultation that is practical, commercially
+                aware, and tailored to the realities of each matter. We advise on dispute resolution, contract concerns, negotiation
+                strategy, business issues, and personal legal questions with an emphasis on plain language, timely updates, and clear
+                options from the start.
               </p>
               <p>
-                We believe strong legal service is built on trust, careful preparation, and a genuine commitment to client success.
-                Whether you need support with a personal matter or more complex representation, we work to help you move forward with
-                confidence and clarity.
+                Our family law support includes guidance on separation, divorce, financial arrangements, child-related issues, property
+                concerns, and other sensitive matters where steady advice and confidentiality are essential. We approach each case with
+                care, measured planning, and a strong commitment to protecting our clients&apos; interests while working toward stable,
+                realistic outcomes.
+              </p>
+              <p>
+                We also provide legal representation for clients who need structured support with formal correspondence, negotiations,
+                risk assessment, and ongoing case management. Whether the priority is resolving a dispute efficiently, protecting a
+                business position, or obtaining dependable advice before making an important decision, our firm is built to deliver
+                thoughtful service, consistent communication, and focused legal strategy.
               </p>
             </div>
 
@@ -162,7 +177,7 @@ export default function Home() {
                 <ScaleIcon />
                 <h3 className="mt-5 font-serif text-[1.95rem] leading-tight">5+ Years of Experience</h3>
                 <p className="mt-4 text-lg leading-8 text-[#50463d]">
-                  Providing trusted legal expertise and dedicated service for clients throughout the United Kingdom.
+                  Providing trusted legal consultation, case preparation, and representation for clients across the United Kingdom.
                 </p>
               </div>
 
@@ -170,7 +185,7 @@ export default function Home() {
                 <FlagIcon />
                 <h3 className="mt-5 font-serif text-[1.95rem] leading-tight">Defining Success</h3>
                 <p className="mt-4 text-lg leading-8 text-[#50463d]">
-                  Achieving strong outcomes through steady preparation, sound judgment, and responsive client care.
+                  Achieving strong outcomes through dispute resolution planning, sound judgment, and responsive client care.
                 </p>
               </div>
             </div>
