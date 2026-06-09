@@ -3,7 +3,7 @@ import SiteFooter from './components/site-footer';
 import SiteHeader from './components/site-header';
 import './globals.css';
 
-const schema = {
+const legalServiceSchema = {
   '@context': 'https://schema.org',
   '@type': 'LegalService',
   name: 'Legal Summit Law Firm',
@@ -24,6 +24,21 @@ const schema = {
       closes: '17:00',
     },
   ],
+};
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Legal Summit Law Firm',
+  url: 'https://legalsummitlawfirm.com',
+  logo: 'https://legalsummitlawfirm.com/logo.png',
+  telephone: '+1-725-238-1725',
+  email: 'info@legalsummitlawfirm.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'United Kingdom',
+  },
+  areaServed: 'United Kingdom',
 };
 
 export const metadata: Metadata = {
@@ -56,7 +71,13 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schema),
+            __html: JSON.stringify(legalServiceSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
           }}
         />
       </head>
