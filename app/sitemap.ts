@@ -2,32 +2,13 @@ import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://legalsummitlawfirm.com';
-  const lastModified = new Date();
 
   return [
-    {
-      url: `${baseUrl}/`,
-      lastModified,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified,
-    },
-    {
-      url: `${baseUrl}/practice-areas`,
-      lastModified,
-    },
-    {
-      url: `${baseUrl}/team`,
-      lastModified,
-    },
-    {
-      url: `${baseUrl}/faq`,
-      lastModified,
-    },
+    { url: `${baseUrl}/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },
+    { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/practice-areas`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/team`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/faq`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
   ];
 }
