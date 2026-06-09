@@ -41,6 +41,14 @@ const organizationSchema = {
   areaServed: 'United Kingdom',
 };
 
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Legal Summit Law Firm',
+  alternateName: 'Legal Summit Law Firm',
+  url: 'https://legalsummitlawfirm.com/',
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://legalsummitlawfirm.com'),
   title: 'Legal Summit Law Firm | Solicitors & Legal Services',
@@ -54,9 +62,12 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: '/legal-summit-logo.png',
-    apple: '/legal-summit-logo.png',
-    shortcut: '/legal-summit-logo.png',
+    icon: [
+      { url: '/logo.png', type: 'image/png', sizes: '512x512' },
+      { url: '/icon.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: [{ url: '/apple-icon.png', type: 'image/png', sizes: '512x512' }],
+    shortcut: '/logo.png',
   },
 };
 
@@ -78,6 +89,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
           }}
         />
       </head>
