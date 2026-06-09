@@ -6,6 +6,9 @@ import { faqItems, heroImage } from '../lib/site-data';
 export const metadata: Metadata = {
   title: 'FAQ | Legal Summit Law Firm',
   description: 'Read answers to common questions about consultations, confidentiality, and legal support at Legal Summit Law Firm.',
+  alternates: {
+    canonical: '/faq',
+  },
 };
 
 export default function FaqPage() {

@@ -6,6 +6,9 @@ import { heroImage, practiceAreaItems } from '../lib/site-data';
 export const metadata: Metadata = {
   title: 'Practice Areas | Legal Summit Law Firm',
   description: 'Explore the legal services offered by Legal Summit Law Firm across family, personal, and estate-related matters.',
+  alternates: {
+    canonical: '/practice-areas',
+  },
 };
 
 export default function PracticeAreasPage() {

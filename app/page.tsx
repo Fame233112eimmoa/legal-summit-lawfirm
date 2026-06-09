@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -22,6 +23,15 @@ const testimonials = [
     location: 'United Kingdom',
   },
 ];
+
+export const metadata: Metadata = {
+  title: 'Legal Summit Law Firm | Solicitors in Bristol',
+  description:
+    'Legal Summit Law Firm provides clear, client-focused legal guidance from Bristol for individuals, families, and businesses across the United Kingdom.',
+  alternates: {
+    canonical: '/',
+  },
+};
 
 function GoldLine() {
   return <span className="block h-px w-14 bg-[#d5ab56]" />;

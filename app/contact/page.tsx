@@ -6,6 +6,9 @@ import { firmInfo, heroImage } from '../lib/site-data';
 export const metadata: Metadata = {
   title: 'Contact | Legal Summit Law Firm',
   description: 'Contact Legal Summit Law Firm to request a consultation with our Bristol-based legal team.',
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 export default function ContactPage() {

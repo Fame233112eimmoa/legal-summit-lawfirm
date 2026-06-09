@@ -6,6 +6,9 @@ import { aboutImage, overviewPoints, processSteps, reasons, stats, statsImage } 
 export const metadata: Metadata = {
   title: 'About | Legal Summit Law Firm',
   description: 'Learn more about Legal Summit Law Firm, our client care, and our approach to legal representation in the United Kingdom.',
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 export default function AboutPage() {

@@ -5,6 +5,9 @@ import { firmInfo, heroImage, teamMembers } from '../lib/site-data';
 export const metadata: Metadata = {
   title: 'Team | Legal Summit Law Firm',
   description: 'Meet the Legal Summit Law Firm team serving clients from Bristol across the United Kingdom.',
+  alternates: {
+    canonical: '/team',
+  },
 };
 
 export default function TeamPage() {
