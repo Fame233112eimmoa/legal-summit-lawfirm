@@ -171,9 +171,9 @@ export const faqItems = [
 
 export const teamMembers = [
   {
-    name: 'Craig Boal',
-    role: 'Managing Partner',
-    bio: 'Leads client strategy, legal positioning, and the overall service standard with a calm, business-minded approach.',
+    name: 'Mark Webb',
+    role: 'Head of the Firm',
+    bio: 'Leads Summit Legal Partner with direct oversight on legal strategy, client service standards, and the overall direction of the firm.',
   },
   {
     name: 'Jeffery Wells',
