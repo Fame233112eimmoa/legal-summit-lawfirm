@@ -71,7 +71,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="site-card-solid rounded-[2rem] p-8 text-left sm:p-10">
       <div className="grid gap-6 sm:grid-cols-2">
         <label className="space-y-2">
-          <span className="text-sm font-semibold text-[#f5ecde]">Full Name</span>
+          <span className="text-sm font-semibold text-[#3d3128]">Full Name</span>
           <input
             required
             autoComplete="name"
@@ -79,13 +79,13 @@ export default function ContactForm() {
             type="text"
             value={formValues.fullName}
             onChange={handleChange}
-            className="w-full rounded-2xl border border-white/10 bg-[#0a0a0a] px-4 py-3 text-[#f5ecde] outline-none transition placeholder:text-[#8e7d67] focus:border-[#c9892d] focus:ring-2 focus:ring-[#c9892d]/20"
+            className="w-full rounded-2xl border border-[#dccab1] bg-white/90 px-4 py-3 text-[#211812] outline-none transition placeholder:text-[#8b765e] focus:border-[#c9892d] focus:ring-2 focus:ring-[#c9892d]/20"
             placeholder="Your full name"
           />
         </label>
 
         <label className="space-y-2">
-          <span className="text-sm font-semibold text-[#f5ecde]">Email Address</span>
+          <span className="text-sm font-semibold text-[#3d3128]">Email Address</span>
           <input
             required
             autoComplete="email"
@@ -93,31 +93,31 @@ export default function ContactForm() {
             type="email"
             value={formValues.email}
             onChange={handleChange}
-            className="w-full rounded-2xl border border-white/10 bg-[#0a0a0a] px-4 py-3 text-[#f5ecde] outline-none transition placeholder:text-[#8e7d67] focus:border-[#c9892d] focus:ring-2 focus:ring-[#c9892d]/20"
+            className="w-full rounded-2xl border border-[#dccab1] bg-white/90 px-4 py-3 text-[#211812] outline-none transition placeholder:text-[#8b765e] focus:border-[#c9892d] focus:ring-2 focus:ring-[#c9892d]/20"
             placeholder="name@example.co.uk"
           />
         </label>
 
         <label className="space-y-2">
-          <span className="text-sm font-semibold text-[#f5ecde]">Phone Number</span>
+          <span className="text-sm font-semibold text-[#3d3128]">Phone Number</span>
           <input
             autoComplete="tel"
             name="phone"
             type="tel"
             value={formValues.phone}
             onChange={handleChange}
-            className="w-full rounded-2xl border border-white/10 bg-[#0a0a0a] px-4 py-3 text-[#f5ecde] outline-none transition placeholder:text-[#8e7d67] focus:border-[#c9892d] focus:ring-2 focus:ring-[#c9892d]/20"
+            className="w-full rounded-2xl border border-[#dccab1] bg-white/90 px-4 py-3 text-[#211812] outline-none transition placeholder:text-[#8b765e] focus:border-[#c9892d] focus:ring-2 focus:ring-[#c9892d]/20"
           />
         </label>
 
         <label className="space-y-2">
-          <span className="text-sm font-semibold text-[#f5ecde]">Practice Area</span>
+          <span className="text-sm font-semibold text-[#3d3128]">Practice Area</span>
           <select
             required
             name="practiceArea"
             value={formValues.practiceArea}
             onChange={handleChange}
-            className="w-full rounded-2xl border border-white/10 bg-[#0a0a0a] px-4 py-3 text-[#f5ecde] outline-none transition focus:border-[#c9892d] focus:ring-2 focus:ring-[#c9892d]/20"
+            className="w-full rounded-2xl border border-[#dccab1] bg-white/90 px-4 py-3 text-[#211812] outline-none transition focus:border-[#c9892d] focus:ring-2 focus:ring-[#c9892d]/20"
           >
             {practiceAreaItems.map((practiceArea) => (
               <option key={practiceArea.title} value={practiceArea.title}>
@@ -129,14 +129,14 @@ export default function ContactForm() {
       </div>
 
       <label className="mt-6 block space-y-2">
-        <span className="text-sm font-semibold text-[#f5ecde]">How can we help?</span>
+        <span className="text-sm font-semibold text-[#3d3128]">How can we help?</span>
         <textarea
           required
           name="message"
           rows={6}
           value={formValues.message}
           onChange={handleChange}
-          className="w-full rounded-3xl border border-white/10 bg-[#0a0a0a] px-4 py-3 text-[#f5ecde] outline-none transition placeholder:text-[#8e7d67] focus:border-[#c9892d] focus:ring-2 focus:ring-[#c9892d]/20"
+          className="w-full rounded-3xl border border-[#dccab1] bg-white/90 px-4 py-3 text-[#211812] outline-none transition placeholder:text-[#8b765e] focus:border-[#c9892d] focus:ring-2 focus:ring-[#c9892d]/20"
           placeholder="Briefly describe your legal matter and the support you need."
         />
       </label>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
@@ -13,8 +13,8 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: #020202;
-  color: #f3ecde;
+  background: #f7f1e8;
+  color: #211b14;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -32,42 +32,42 @@ h6 {
 }
 
 ::selection {
-  background: rgba(201, 137, 45, 0.22);
-  color: #f8f2e7;
+  background: rgba(201, 137, 45, 0.18);
+  color: #20170f;
 }
 
 @layer components {
   .section-label {
-    @apply text-sm font-semibold uppercase tracking-[0.26em] text-[#d6a84f];
+    @apply text-sm font-semibold uppercase tracking-[0.26em] text-[#b27b2e];
   }
 
   .site-card {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(186, 146, 81, 0.18);
+    background: rgba(255, 250, 243, 0.9);
     border-radius: 1.75rem;
-    box-shadow: 0 20px 60px rgba(2, 8, 18, 0.28);
+    box-shadow: 0 24px 60px rgba(96, 73, 39, 0.1);
     backdrop-filter: blur(12px);
   }
 
   .site-card-solid {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: #0e0e0e;
+    border: 1px solid rgba(186, 146, 81, 0.18);
+    background: #fffaf2;
     border-radius: 1.75rem;
-    box-shadow: 0 20px 60px rgba(2, 8, 18, 0.28);
+    box-shadow: 0 24px 60px rgba(96, 73, 39, 0.08);
   }
 
   .site-card-soft {
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: #141414;
+    border: 1px solid rgba(186, 146, 81, 0.16);
+    background: #f5ede2;
     border-radius: 1.5rem;
-    box-shadow: 0 20px 60px rgba(2, 8, 18, 0.24);
+    box-shadow: 0 18px 48px rgba(96, 73, 39, 0.08);
   }
 
   .site-text-muted {
-    color: #cabba7;
+    color: #5e5144;
   }
 
   .site-text-soft {
-    color: #a99880;
+    color: #7a6b59;
   }
 }

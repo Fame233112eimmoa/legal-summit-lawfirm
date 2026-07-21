@@ -79,11 +79,11 @@ function QuoteIcon() {
 
 export default function Home() {
   return (
-    <main className="bg-[#020202] text-white">
+    <main className="bg-[#f7f1e8] text-[#211b14]">
       <section
-        className="relative min-h-screen overflow-hidden bg-[#020202]"
+        className="relative min-h-screen overflow-hidden bg-[#f7f1e8]"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.76)), url(${heroImage})`,
+          backgroundImage: `linear-gradient(rgba(255,248,238,0.78), rgba(244,233,214,0.82)), url(${heroImage})`,
           backgroundPosition: 'center right',
           backgroundSize: 'cover',
         }}
@@ -93,16 +93,16 @@ export default function Home() {
             <div className="max-w-[72rem]">
               <div className="mb-12 mt-10 flex max-w-[20rem] items-center gap-4 sm:mb-14 sm:mt-12 sm:max-w-none sm:gap-5">
                 <GoldLine />
-                <p className="text-[0.95rem] font-medium leading-relaxed tracking-[0.03em] text-[#d7b46a] sm:text-[1.1rem] lg:text-[1.2rem]">
+                <p className="text-[0.95rem] font-medium leading-relaxed tracking-[0.03em] text-[#a97524] sm:text-[1.1rem] lg:text-[1.2rem]">
                   Solicitors, consultations, and legal representation shaped around your goals
                 </p>
               </div>
 
-              <h1 className="max-w-[19rem] font-serif text-[46px] font-medium leading-[1.12] tracking-[-0.02em] text-white sm:max-w-[40rem] sm:text-[60px] sm:leading-[1.12] lg:max-w-[56rem] lg:text-[72px] lg:leading-[1.1]">
+              <h1 className="max-w-[19rem] font-serif text-[46px] font-medium leading-[1.12] tracking-[-0.02em] text-[#1f160f] sm:max-w-[40rem] sm:text-[60px] sm:leading-[1.12] lg:max-w-[56rem] lg:text-[72px] lg:leading-[1.1]">
                 Legal Summit Law Firm
               </h1>
 
-              <p className="mt-8 max-w-3xl text-lg leading-9 text-[#e6d7c1] sm:text-[1.18rem]">
+              <p className="mt-8 max-w-3xl text-lg leading-9 text-[#5a4b3b] sm:text-[1.18rem]">
                 Legal Summit Law Firm provides professional legal services for individuals, families, business owners, and organisations
                 seeking clear legal consultation, dispute resolution support, corporate law guidance, family law advice, and reliable
                 representation. We focus on practical next steps, careful preparation, and responsive communication so clients can move
@@ -110,13 +110,13 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mt-24 border-t border-white/20 pt-12 sm:mt-28 sm:pt-14 lg:mt-24">
+            <div className="mt-24 border-t border-[#d7c7b2] pt-12 sm:mt-28 sm:pt-14 lg:mt-24">
               <div className="grid gap-14 md:grid-cols-2 md:gap-16">
                 <div className="flex items-start gap-5">
                   <LocationIcon />
                   <div>
-                    <p className="text-base font-semibold text-[#d7b46a]">Our Location</p>
-                    <p className="mt-5 font-serif text-[1.95rem] leading-tight text-white sm:text-[2.45rem]">
+                    <p className="text-base font-semibold text-[#a97524]">Our Location</p>
+                    <p className="mt-5 font-serif text-[1.95rem] leading-tight text-[#1f160f] sm:text-[2.45rem]">
                       Bristol, United Kingdom
                     </p>
                   </div>
@@ -125,8 +125,8 @@ export default function Home() {
                 <div className="flex items-start gap-5">
                   <PhoneIcon />
                   <div>
-                    <p className="text-base font-semibold text-[#d7b46a]">Free Review</p>
-                    <p className="mt-5 font-serif text-[1.95rem] leading-tight text-white sm:text-[2.45rem]">
+                    <p className="text-base font-semibold text-[#a97524]">Free Review</p>
+                    <p className="mt-5 font-serif text-[1.95rem] leading-tight text-[#1f160f] sm:text-[2.45rem]">
                       +44 20 7946 0958
                     </p>
                   </div>
@@ -137,7 +137,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#f5f1e8] px-6 py-24 text-[#171411] sm:px-8 lg:px-10 lg:py-32">
+      <section className="bg-[#fbf7f0] px-6 py-24 text-[#171411] sm:px-8 lg:px-10 lg:py-32">
         <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1.02fr_0.98fr] lg:items-start">
           <div>
             <div className="flex items-center gap-5">
@@ -213,15 +213,15 @@ export default function Home() {
       </section>
 
       <section
-        className="relative overflow-hidden bg-[#070707] px-6 py-24 sm:px-8 lg:px-10 lg:py-32"
+        className="relative overflow-hidden bg-[#f3e9d8] px-6 py-24 sm:px-8 lg:px-10 lg:py-32"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.74), rgba(0,0,0,0.74)), url(${testimonialBackground})`,
+          backgroundImage: `linear-gradient(rgba(251,244,234,0.92), rgba(244,232,214,0.9)), url(${testimonialBackground})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
       >
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch">
-          <div className="relative min-h-[420px] overflow-hidden bg-[#111111] sm:min-h-[540px] lg:min-h-[640px]">
+          <div className="relative min-h-[420px] overflow-hidden bg-[#eadcc8] sm:min-h-[540px] lg:min-h-[640px]">
             <Image
               src="/lawyer-standing.jpg"
               alt="Solicitor standing in office"
@@ -230,16 +230,16 @@ export default function Home() {
               className="object-cover object-[center_16%] lg:object-[center_12%]"
               sizes="(max-width: 1024px) 100vw, 42vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/5" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#f5ebdd]/25 via-transparent to-white/20" />
           </div>
 
           <div className="flex flex-col justify-center lg:pl-4">
             <div className="flex items-center gap-5">
               <GoldLine />
-              <p className="text-base font-medium text-[#d7b46a] sm:text-lg">We Look At The Law Differently</p>
+              <p className="text-base font-medium text-[#a97524] sm:text-lg">We Look At The Law Differently</p>
             </div>
 
-            <h2 className="mt-8 max-w-3xl font-serif text-[3rem] leading-tight text-white sm:text-[4rem]">
+            <h2 className="mt-8 max-w-3xl font-serif text-[3rem] leading-tight text-[#1f160f] sm:text-[4rem]">
               What Our Clients Say
             </h2>
 
@@ -247,15 +247,15 @@ export default function Home() {
               {testimonials.map((testimonial, index) => (
                 <article
                   key={testimonial.name}
-                  className={`${index !== testimonials.length - 1 ? 'border-b border-white/15 pb-10' : ''}`}
+                  className={`${index !== testimonials.length - 1 ? 'border-b border-[#ddcdb7] pb-10' : ''}`}
                 >
                   <QuoteIcon />
-                  <p className="mt-6 max-w-3xl text-[1.32rem] leading-10 text-[#f3ece1]">{testimonial.quote}</p>
-                  <div className="mt-7 flex items-center gap-4 text-white">
-                    <div className="h-px w-6 bg-[#d7b46a]" />
+                  <p className="mt-6 max-w-3xl text-[1.32rem] leading-10 text-[#3c2f24]">{testimonial.quote}</p>
+                  <div className="mt-7 flex items-center gap-4 text-[#1f160f]">
+                    <div className="h-px w-6 bg-[#a97524]" />
                     <div>
                       <p className="font-serif text-[1.6rem] leading-tight">{testimonial.name}</p>
-                      <p className="mt-1 text-base text-[#d7ccb9]">{testimonial.location}</p>
+                      <p className="mt-1 text-base text-[#7a6857]">{testimonial.location}</p>
                     </div>
                   </div>
                 </article>

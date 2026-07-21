@@ -13,24 +13,24 @@ export const metadata: Metadata = {
 
 export default function FaqPage() {
   return (
-    <main className="bg-[#020202] text-[#f3ecde]">
+    <main className="bg-[#f7f1e8] text-[#211b14]">
       <PageBanner
         title="Frequently Asked Questions"
         description="Find clear answers to common questions about consultations, confidentiality, and how our firm works with clients."
         image={heroImage}
       />
 
-      <section className="bg-[#090909] py-24">
+      <section className="bg-[#f7f1e8] py-24">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
           <div className="max-w-3xl">
             <p className="section-label">Client Questions</p>
-            <h2 className="mt-5 font-serif text-4xl leading-tight text-white sm:text-[2.9rem]">Guidance before you get started</h2>
+            <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[2.9rem]">Guidance before you get started</h2>
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {faqItems.map((faq) => (
               <article key={faq.question} className="site-card-solid p-8">
-                <h3 className="font-serif text-2xl text-white">{faq.question}</h3>
+                <h3 className="font-serif text-2xl text-[#20170f]">{faq.question}</h3>
                 <p className="site-text-muted mt-4 leading-8">{faq.answer}</p>
               </article>
             ))}
@@ -38,10 +38,10 @@ export default function FaqPage() {
         </div>
       </section>
 
-      <section className="bg-[#111111] py-24">
+      <section className="bg-[#fbf6ee] py-24">
         <div className="mx-auto max-w-5xl px-6 text-center sm:px-8 lg:px-10">
           <p className="section-label">Still Need Help?</p>
-          <h2 className="mt-5 font-serif text-4xl leading-tight text-white sm:text-[2.9rem]">Contact our team for tailored guidance</h2>
+          <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[2.9rem]">Contact our team for tailored guidance</h2>
           <p className="site-text-muted mt-5 text-lg leading-8">
             If your question relates to a specific matter, we can discuss it in more detail and explain your next options.
           </p>
