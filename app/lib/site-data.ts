@@ -7,12 +7,12 @@ export const wordmarkLogo = '/summit-legal-partner-wordmark.jpg';
 export const markLogo = '/summit-legal-partner-mark.jpg';
 
 export const firmInfo = {
-  address: 'Las Vegas, Nevada, United States',
-  email: 'info@summitlegalpartner.com',
+  address: 'United States, Las Vegas',
+  email: 'summitlegalpartnerss@gmail.com',
   hours: 'Monday to Friday, 9:00 AM – 5:00 PM PT',
-  location: 'Las Vegas, Nevada',
-  phone: '+1 (725) 238-1725',
-  phoneLink: 'tel:+17252381725',
+  location: 'United States, Las Vegas',
+  phone: '+1 248 592 4991',
+  phoneLink: 'tel:+12485924991',
 };
 
 export const navigationItems = [
@@ -90,13 +90,13 @@ export const testimonialItems = [
     quote:
       'They moved quickly, explained each decision clearly, and made a high-pressure situation feel controlled from the start.',
     name: 'Jordan Reyes',
-    location: 'Las Vegas, Nevada',
+    location: 'United States, Las Vegas',
   },
   {
     quote:
       'Summit Legal Partner delivered the kind of calm, premium legal support you hope for when the stakes are real.',
     name: 'Monica Ellis',
-    location: 'Henderson, Nevada',
+    location: 'United States, Henderson',
   },
 ];
 
@@ -154,7 +154,7 @@ export const teamMembers = [
 export const stats = [
   ['24h', 'Average reply window'],
   ['Direct', 'Partner access'],
-  ['Nevada', 'Home market'],
+  ['U.S.', 'Home market'],
   ['Private', 'Confidential counsel'],
 ] as const;
 

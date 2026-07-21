@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import SiteLogo from './components/site-logo';
 import {
   firmInfo,
   overviewPoints,
@@ -64,7 +63,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
             <div className="pt-4 lg:pt-8">
-              <div className="site-pill">Las Vegas, Nevada</div>
+              <div className="site-pill">United States, Las Vegas</div>
               <p className="section-label mt-6">{siteName}</p>
               <h1 className="mt-4 max-w-4xl font-serif text-[2.75rem] leading-[1.02] text-[#19120c] sm:text-[4rem] lg:text-[4.9rem]">
                 Simple, strategic legal counsel for the moments that matter most.
@@ -105,8 +104,16 @@ export default function Home() {
 
             <div className="site-card-solid p-5 sm:p-6 lg:p-8">
               <div className="grid gap-4">
-                <div className="site-card flex items-center justify-center p-6">
-                  <SiteLogo variant="mark" size="hero" />
+                <div className="relative min-h-[340px] overflow-hidden rounded-[1.8rem] border border-[#efefef] bg-[#fcfcfc] sm:min-h-[400px] lg:min-h-[520px]">
+                  <Image
+                    src="/summit-home-hero.jpg"
+                    alt="Scales of justice and gavel on a law book"
+                    fill
+                    priority
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#120e0a]/10 via-transparent to-white/10" />
                 </div>
 
                 <div className="grid gap-3 sm:grid-cols-2">
