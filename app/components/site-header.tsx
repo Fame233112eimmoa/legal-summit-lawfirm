@@ -26,11 +26,11 @@ export default function SiteHeader() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-[#efefef] bg-[rgba(255,255,255,0.92)] backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 sm:px-8 lg:px-10">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 sm:px-8 lg:px-10">
           <SiteLogo href="/" priority size="header" />
 
-          <div className="hidden lg:flex lg:items-center lg:gap-6 xl:gap-8">
-            <nav className="hidden items-center gap-6 text-[0.95rem] font-medium text-[#584a3c] lg:flex xl:gap-8">
+          <div className="hidden lg:flex lg:items-center lg:gap-4 xl:gap-6">
+            <nav className="hidden items-center gap-4 text-[0.9rem] font-medium text-[#584a3c] lg:flex xl:gap-6 xl:text-[0.95rem]">
               {items.map((item) => {
                 const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
 
@@ -46,7 +46,7 @@ export default function SiteHeader() {
               })}
             </nav>
 
-            <Link href="/contact" className="site-button-primary">
+            <Link href="/contact" className="site-button-primary hidden xl:inline-flex">
               Schedule Consultation
             </Link>
           </div>
