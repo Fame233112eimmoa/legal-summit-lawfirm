@@ -20,9 +20,55 @@ export const navigationItems = [
   { href: '/about', label: 'About' },
   { href: '/team', label: 'Team' },
   { href: '/practice-areas', label: 'Practice Areas' },
+  { href: '/offices', label: 'Offices' },
   { href: '/faq', label: 'FAQ' },
   { href: '/contact', label: 'Contact' },
 ];
+
+export const officeLocations = [
+  {
+    city: 'Las Vegas',
+    state: 'Nevada',
+    type: 'Headquarters',
+    coverage: 'Serving Las Vegas, Henderson, Summerlin, and the wider Clark County market.',
+    note: 'Primary office and central client intake team.',
+  },
+  {
+    city: 'Arlington',
+    state: 'Virginia',
+    type: 'Consultation Office',
+    coverage: 'Supporting Northern Virginia, Washington metro, and surrounding corporate and private matters.',
+    note: 'In-person meetings available by appointment.',
+  },
+  {
+    city: 'Atlanta',
+    state: 'Georgia',
+    type: 'Regional Office',
+    coverage: 'Serving Atlanta metro clients with business, private, and strategic legal support.',
+    note: 'Appointments coordinated through the central client team.',
+  },
+  {
+    city: 'Chicago',
+    state: 'Illinois',
+    type: 'Regional Office',
+    coverage: 'Serving clients across downtown Chicago and the wider Cook County business corridor.',
+    note: 'Available for scheduled consultations and ongoing matter support.',
+  },
+  {
+    city: 'Dallas',
+    state: 'Texas',
+    type: 'Consultation Office',
+    coverage: 'Supporting Dallas-Fort Worth clients with structured legal counsel and responsive guidance.',
+    note: 'By-appointment access for private and business consultations.',
+  },
+  {
+    city: 'Los Angeles',
+    state: 'California',
+    type: 'Regional Office',
+    coverage: 'Serving Los Angeles metro clients requiring discreet, high-touch legal coordination.',
+    note: 'Coordinated through the firm’s national intake team.',
+  },
+] as const;
 
 export const practiceAreaItems = [
   {
