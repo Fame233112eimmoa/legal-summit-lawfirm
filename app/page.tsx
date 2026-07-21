@@ -58,11 +58,11 @@ function ArrowIcon() {
 export default function Home() {
   return (
     <main className="text-[#211b14]">
-      <section className="relative overflow-hidden px-6 pb-14 pt-14 sm:px-8 sm:pb-16 sm:pt-16 lg:px-10 lg:pb-20 lg:pt-18">
+      <section className="relative overflow-hidden px-6 pb-14 pt-8 sm:px-8 sm:pb-16 sm:pt-9 lg:px-10 lg:pb-20 lg:pt-10">
         <div className="absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(circle_at_top_right,rgba(190,151,97,0.08),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.95),rgba(255,255,255,0))]" />
         <div className="relative mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
-            <div className="pt-4 lg:pt-8">
+            <div className="pt-0 lg:pt-1">
               <div className="site-pill">United States, Las Vegas</div>
               <p className="section-label mt-6">{siteName}</p>
               <h1 className="mt-4 max-w-4xl font-serif text-[2.75rem] leading-[1.02] text-[#19120c] sm:text-[4rem] lg:text-[4.9rem]">
