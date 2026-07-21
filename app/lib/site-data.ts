@@ -145,7 +145,7 @@ export const teamMembers = [
     bio: 'Manages communication, scheduling, and high-touch client support with professionalism and close attention to detail.',
   },
   {
-    name: 'Patrick Cheung',
+    name: 'Jacob Odonkor',
     role: 'Operations & Matter Support',
     bio: 'Keeps internal workflows, file operations, and client service logistics running smoothly behind the scenes.',
   },

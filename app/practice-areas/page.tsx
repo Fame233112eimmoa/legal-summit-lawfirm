@@ -45,7 +45,7 @@ export default function PracticeAreasPage() {
         </div>
       </section>
 
-      <section className="border-y border-[#ece2d4] bg-white px-6 py-24 sm:px-8 lg:px-10 lg:py-28">
+      <section className="border-y border-[#efefef] bg-white px-6 py-24 sm:px-8 lg:px-10 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="section-label">What You Can Expect</p>

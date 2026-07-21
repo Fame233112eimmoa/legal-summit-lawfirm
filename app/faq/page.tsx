@@ -38,7 +38,7 @@ export default function FaqPage() {
         </div>
       </section>
 
-      <section className="border-y border-[#ece2d4] bg-white px-6 py-24 sm:px-8 lg:px-10 lg:py-28">
+      <section className="border-y border-[#efefef] bg-white px-6 py-24 sm:px-8 lg:px-10 lg:py-28">
         <div className="mx-auto max-w-5xl px-6 text-center sm:px-8 lg:px-10">
           <p className="section-label">Still Need Help?</p>
           <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[3.2rem]">Contact our team for tailored guidance</h2>

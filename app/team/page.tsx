@@ -63,7 +63,7 @@ export default function TeamPage() {
         </div>
       </section>
 
-      <section className="border-y border-[#ece2d4] bg-white px-6 py-24 sm:px-8 lg:px-10 lg:py-28">
+      <section className="border-y border-[#efefef] bg-white px-6 py-24 sm:px-8 lg:px-10 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="section-label">Staff Profiles</p>
@@ -77,7 +77,7 @@ export default function TeamPage() {
                 <p className="mt-6 text-xs font-semibold uppercase tracking-[0.22em] text-[#b27b2e]">{member.role}</p>
                 <h3 className="mt-3 font-serif text-[1.9rem] leading-tight text-[#20170f]">{member.name}</h3>
                 <p className="site-text-muted mt-4 leading-8">{member.bio}</p>
-                <div className="mt-6 border-t border-[#e6d8c3] pt-5">
+                <div className="mt-6 border-t border-[#efefef] pt-5">
                   <p className="text-sm font-medium text-[#4d3d30]">Legal Information</p>
                   <p className="site-text-muted mt-2 text-sm leading-7">
                     Supports Summit Legal Partner&apos;s client service, matter preparation, and strategic coordination across active

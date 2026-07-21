@@ -25,7 +25,7 @@ export default function SiteHeader() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-[#ebe0d0] bg-[rgba(252,250,246,0.92)] backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-[#efefef] bg-[rgba(255,255,255,0.92)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 sm:px-8 lg:px-10">
           <SiteLogo href="/" priority size="header" />
 
@@ -54,7 +54,7 @@ export default function SiteHeader() {
           <button
             type="button"
             onClick={() => setIsMenuOpen(true)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#d9c8b0] bg-white text-[#5b4a39] transition hover:border-[#be9761] hover:text-[#9b7440] lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#e5e5e5] bg-white text-[#5b4a39] transition hover:border-[#be9761] hover:text-[#9b7440] lg:hidden"
             aria-label="Open navigation menu"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
@@ -76,17 +76,17 @@ export default function SiteHeader() {
 
       <aside
         id="mobile-navigation"
-        className={`fixed inset-y-0 right-0 z-50 flex w-full max-w-[22rem] flex-col bg-[#fcfaf6] px-6 py-6 text-[#221811] shadow-[0_0_50px_rgba(87,64,36,0.14)] transition-transform duration-300 lg:hidden ${
+        className={`fixed inset-y-0 right-0 z-50 flex w-full max-w-[22rem] flex-col bg-white px-6 py-6 text-[#221811] shadow-[0_0_50px_rgba(15,23,42,0.08)] transition-transform duration-300 lg:hidden ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         aria-hidden={!isMenuOpen}
       >
-        <div className="flex items-start justify-between gap-4 border-b border-[#eadfcf] pb-5">
+        <div className="flex items-start justify-between gap-4 border-b border-[#efefef] pb-5">
           <SiteLogo href="/" size="header" />
           <button
             type="button"
             onClick={() => setIsMenuOpen(false)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#dcc8aa] text-[#6c5948] transition hover:border-[#be9761] hover:text-[#9b7440]"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#e5e5e5] text-[#6c5948] transition hover:border-[#be9761] hover:text-[#9b7440]"
             aria-label="Close navigation menu"
           >
             <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 fill-current">
@@ -103,7 +103,7 @@ export default function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`border-b border-[#f0e7da] py-4 text-base font-medium transition hover:text-[#9b7440] ${
+                className={`border-b border-[#f2f2f2] py-4 text-base font-medium transition hover:text-[#9b7440] ${
                   isActive ? 'text-[#9b7440]' : 'text-[#4c3d31]'
                 }`}
               >

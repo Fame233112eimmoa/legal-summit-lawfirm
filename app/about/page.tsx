@@ -62,7 +62,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-[#ece2d4] bg-white px-6 py-24 sm:px-8 lg:px-10 lg:py-28">
+      <section className="border-y border-[#efefef] bg-white px-6 py-24 sm:px-8 lg:px-10 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="section-label">How We Work</p>
@@ -74,7 +74,7 @@ export default function AboutPage() {
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {processSteps.map((step, index) => (
               <article key={step.title} className="site-card-solid p-8">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#f3eadf] font-serif text-lg text-[#9b7440]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#f6f6f6] font-serif text-lg text-[#9b7440]">
                   {`0${index + 1}`}
                 </div>
                 <h3 className="mt-6 font-serif text-2xl text-[#20170f]">{step.title}</h3>
