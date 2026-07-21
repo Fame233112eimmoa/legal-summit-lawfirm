@@ -51,8 +51,7 @@ export default function TeamPage() {
 
                   {index === 0 ? (
                     <div className="site-card-soft p-6">
-                      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b27b2e]">Head of the Firm</p>
-                      <p className="mt-3 font-serif text-2xl text-[#20170f]">{member.name}</p>
+                      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b27b2e]">Leadership</p>
                       <p className="site-text-muted mt-3 leading-7">
                         Leads the firm’s direction, client standards, and overall legal strategy across the practice.
                       </p>
