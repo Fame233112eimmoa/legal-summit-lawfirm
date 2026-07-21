@@ -1,22 +1,35 @@
+import { firmInfo, siteName } from '../lib/site-data';
+import SiteLogo from './site-logo';
+
 type PageBannerProps = {
-  title: string;
   description: string;
-  image: string;
+  eyebrow?: string;
+  title: string;
 };
 
-export default function PageBanner({ title, description, image }: PageBannerProps) {
+export default function PageBanner({ title, description, eyebrow = siteName }: PageBannerProps) {
   return (
-    <section className="border-b border-[#e6d8c3] bg-[#f7f1e8]">
-      <div className="mx-auto max-w-7xl px-6 py-8 sm:px-8 lg:px-10 lg:py-10">
-        <div className="overflow-hidden rounded-[2rem] shadow-[0_24px_50px_rgba(98,72,38,0.12)]">
-          <div className="relative min-h-[360px]">
-            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${image})` }} />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,249,239,0.96),rgba(250,241,226,0.88),rgba(245,232,211,0.78))]" />
-            <div className="relative flex min-h-[360px] items-center px-8 py-14 sm:px-12 lg:px-16">
-              <div className="max-w-3xl text-[#20170f]">
-                <p className="section-label">Legal Summit Law Firm</p>
-                <h1 className="mt-5 font-serif text-4xl leading-tight sm:text-5xl lg:text-[3.8rem]">{title}</h1>
-                <p className="mt-6 max-w-2xl text-lg leading-8 text-[#5d4d3b]">{description}</p>
+    <section className="px-6 pt-8 sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-7xl">
+        <div className="site-card-solid overflow-hidden p-8 sm:p-10 lg:p-14">
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+            <div>
+              <p className="section-label">{eyebrow}</p>
+              <h1 className="mt-5 max-w-3xl font-serif text-4xl leading-tight text-[#1d150e] sm:text-5xl lg:text-[4rem]">
+                {title}
+              </h1>
+              <p className="site-text-muted mt-6 max-w-2xl text-lg leading-8">{description}</p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+              <div className="site-card flex items-center justify-center p-6">
+                <SiteLogo variant="mark" size="badge" />
+              </div>
+
+              <div className="site-card-soft p-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#a57c49]">Las Vegas Office</p>
+                <p className="mt-3 font-serif text-2xl text-[#1d150e]">{firmInfo.location}</p>
+                <p className="site-text-muted mt-2 text-sm leading-7">{firmInfo.hours}</p>
               </div>
             </div>
           </div>

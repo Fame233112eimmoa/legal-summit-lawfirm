@@ -1,17 +1,18 @@
-export const heroImage =
-  'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80';
-export const aboutImage =
-  'https://images.unsplash.com/photo-1453945619913-79ec89a82c51?auto=format&fit=crop&w=1200&q=80';
-export const statsImage =
-  'https://images.unsplash.com/photo-1528747008803-1f1d2dc9f1f4?auto=format&fit=crop&w=1600&q=80';
+export const siteName = 'Summit Legal Partner';
+export const siteTagline = 'Best law firm in the U.S.';
+export const siteDomain = 'https://legalsummitlawfirm.com';
+export const siteDescription =
+  'Summit Legal Partner is a Las Vegas law firm offering premium legal counsel, practical strategy, and dependable representation for businesses, families, and private clients.';
+export const wordmarkLogo = '/summit-legal-partner-wordmark.jpg';
+export const markLogo = '/summit-legal-partner-mark.jpg';
 
 export const firmInfo = {
-  address: 'Generator Building, Counterslip, Redcliffe, Bristol BS1 6BX, United Kingdom',
-  email: 'legalsummitlawfirm@gmail.com',
-  hours: 'Monday to Friday, 9:00 AM – 5:00 PM',
-  location: 'Bristol, United Kingdom',
-  phone: '+44 7919705845',
-  phoneLink: 'tel:+447919705845',
+  address: 'Las Vegas, Nevada, United States',
+  email: 'info@summitlegalpartner.com',
+  hours: 'Monday to Friday, 9:00 AM – 5:00 PM PT',
+  location: 'Las Vegas, Nevada',
+  phone: '+1 (725) 238-1725',
+  phoneLink: 'tel:+17252381725',
 };
 
 export const navigationItems = [
@@ -25,155 +26,155 @@ export const navigationItems = [
 
 export const practiceAreaItems = [
   {
-    title: 'Family Law',
+    title: 'Business Counsel',
     description:
-      'Measured advice on family disputes, responsibilities, and long-term planning with practical support at every stage.',
+      'Ongoing legal guidance for founders, executives, and established companies managing growth, risk, and key decisions.',
   },
   {
-    title: 'Divorce & Separation',
+    title: 'Contract Strategy',
     description:
-      'Clear legal guidance for divorce, judicial separation, and negotiated settlements with a focus on fair resolution.',
+      'Drafting, reviewing, and negotiating agreements with a clear view of leverage, risk, and long-term business value.',
   },
   {
-    title: 'Child Arrangements',
+    title: 'Real Estate Matters',
     description:
-      'Sensitive representation on residence, contact, and parenting arrangements centred on a child’s welfare.',
+      'Support on acquisitions, leases, disputes, and property negotiations handled with practical commercial awareness.',
   },
   {
-    title: 'Domestic Abuse Protection',
+    title: 'Family & Private Matters',
     description:
-      'Urgent assistance with protective applications and safeguarding measures delivered with discretion and care.',
+      'Trusted counsel for sensitive family issues and private legal matters where discretion and steady advice matter most.',
   },
   {
-    title: 'Civil Partnerships',
+    title: 'Estate Planning',
     description:
-      'Support on forming, protecting, and dissolving civil partnerships with tailored legal advice throughout.',
+      'Wills, succession planning, and legacy protection designed around your family, assets, and long-term intentions.',
   },
   {
-    title: 'Adoption & Surrogacy',
+    title: 'Civil Litigation',
     description:
-      'Thoughtful legal support for modern family-building, parental orders, and related court procedures.',
+      'Case assessment, dispute management, negotiation, and courtroom preparation when formal action becomes necessary.',
   },
   {
-    title: 'Property Settlements',
+    title: 'Risk & Compliance',
     description:
-      'Strategic advice on finances, property ownership, and the fair division of shared assets after separation.',
+      'Structured guidance on obligations, internal processes, and legal exposure before problems escalate.',
   },
   {
-    title: 'Wills & Probate',
+    title: 'Personal Advisory',
     description:
-      'Reliable support with wills, probate administration, and protecting the future of your estate and loved ones.',
+      'Direct counsel for individuals facing important personal decisions, urgent questions, or high-stakes legal moments.',
   },
 ];
 
 export const reasons = [
   {
-    title: 'Expertise and Experience',
+    title: 'Partner-Level Attention',
     description:
-      'Our solicitors combine careful preparation with practical legal knowledge to guide clients through complex matters confidently.',
+      'We keep the client experience focused, direct, and highly responsive so important matters never feel handed off or diluted.',
   },
   {
-    title: 'Client-Centred Approach',
+    title: 'Clear Strategic Thinking',
     description:
-      'Every matter is handled with clear communication, tailored strategy, and close attention to your personal or business priorities.',
+      'Advice is shaped around your priorities, timing, exposure, and practical next steps rather than generic legal language.',
   },
   {
-    title: 'Commitment to Excellence',
+    title: 'A Premium Standard of Care',
     description:
-      'We are dedicated to high professional standards, considered advice, and dependable representation from start to finish.',
+      'From first contact to final resolution, the experience is designed to feel composed, discreet, and exceptionally well prepared.',
   },
 ];
 
 export const testimonialItems = [
   {
     quote:
-      'The team was thoughtful, organised, and very reassuring throughout my family matter. I always felt informed and properly supported.',
-    name: 'Amelia Thompson',
-    location: 'United Kingdom',
+      'They moved quickly, explained each decision clearly, and made a high-pressure situation feel controlled from the start.',
+    name: 'Jordan Reyes',
+    location: 'Las Vegas, Nevada',
   },
   {
     quote:
-      'Legal Summit Law Firm provided calm, practical advice at a difficult time. Their attention to detail and professionalism made a real difference.',
-    name: 'James Walker',
-    location: 'United Kingdom',
+      'Summit Legal Partner delivered the kind of calm, premium legal support you hope for when the stakes are real.',
+    name: 'Monica Ellis',
+    location: 'Henderson, Nevada',
   },
 ];
 
 export const faqItems = [
   {
-    question: 'How do I arrange an initial consultation?',
+    question: 'How do I schedule an initial consultation?',
     answer:
-      'You can call or email our team, or use the appointment form, and we will help arrange a suitable consultation time.',
+      'Call, email, or use the consultation form and our team will help arrange the most suitable time for an initial conversation.',
   },
   {
-    question: 'Do you support clients outside Bristol?',
+    question: 'Do you only work with clients in Las Vegas?',
     answer:
-      'Yes. Although we are based in Bristol, we advise individuals, families, and businesses across the United Kingdom.',
+      'No. We serve clients across the Las Vegas valley and can discuss select matters in other U.S. markets when appropriate.',
   },
   {
-    question: 'Will my matter be treated confidentially?',
+    question: 'Will my matter be handled confidentially?',
     answer:
-      'Yes. Confidentiality, discretion, and professional care are central to the way our firm handles every instruction.',
+      'Yes. Confidentiality, discretion, and thoughtful handling are central to how we work with every client and every enquiry.',
   },
   {
-    question: 'What happens after I contact the firm?',
+    question: 'What should I prepare before contacting the firm?',
     answer:
-      'We review your enquiry, respond promptly, and outline the next steps, including whether a consultation or further documents are needed.',
+      'A short summary of your matter, any key dates, and relevant documents are helpful, but you do not need everything organized before reaching out.',
   },
 ];
 
 export const teamMembers = [
   {
     name: 'Craig Boal',
-    role: 'Head Solicitor',
-    bio: 'Leads the firm with a practical, client-focused approach and provides steady oversight on legal strategy and representation.',
+    role: 'Managing Partner',
+    bio: 'Leads client strategy, legal positioning, and the overall service standard with a calm, business-minded approach.',
   },
   {
     name: 'Jeffery Wells',
-    role: 'Legal Staff',
-    bio: 'Supports case preparation, client coordination, and day-to-day legal administration across active matters.',
+    role: 'Senior Counsel',
+    bio: 'Supports complex matters with measured legal analysis, practical recommendations, and disciplined preparation.',
   },
   {
     name: 'George Mensah',
-    role: 'Legal Staff',
-    bio: 'Assists with client communication, file handling, and document support to help matters progress smoothly.',
+    role: 'Case Strategy Lead',
+    bio: 'Coordinates matter planning, document flow, and day-to-day progress so client work stays organized and forward-moving.',
   },
   {
     name: 'Agnes Rail',
-    role: 'Firm Secretary',
-    bio: 'Manages front-of-office communication, scheduling, and administrative support with care and professionalism.',
+    role: 'Client Relations Director',
+    bio: 'Manages communication, scheduling, and high-touch client support with professionalism and close attention to detail.',
   },
   {
     name: 'Patrick Cheung',
-    role: 'Legal Staff',
-    bio: 'Provides dependable operational support across the firm, helping maintain responsive service for clients.',
+    role: 'Operations & Matter Support',
+    bio: 'Keeps internal workflows, file operations, and client service logistics running smoothly behind the scenes.',
   },
 ] as const;
 
 export const stats = [
-  ['2000+', 'Client Consultations'],
-  ['93%', 'Successful Outcomes'],
-  ['20+', 'Legal Professionals'],
-  ['5+', 'Years of Combined Experience'],
+  ['24h', 'Average reply window'],
+  ['Direct', 'Partner access'],
+  ['Nevada', 'Home market'],
+  ['Private', 'Confidential counsel'],
 ] as const;
 
 export const overviewPoints = [
-  'Clear advice tailored to your circumstances and objectives',
-  'Discreet client care with professional standards throughout',
-  'Strategic representation for individuals, families, and businesses',
+  'Clear advice shaped around your priorities, timeline, and risk profile',
+  'A polished, responsive client experience from first call to final resolution',
+  'Discreet representation for business, family, and private legal matters',
 ];
 
 export const processSteps = [
   {
-    title: 'Initial Conversation',
-    description: 'We listen carefully, understand your priorities, and explain your available legal options clearly.',
+    title: 'Initial Consultation',
+    description: 'We define what matters most, what is at risk, and where the strongest legal leverage or protection exists.',
   },
   {
-    title: 'Tailored Strategy',
-    description: 'We build a focused plan suited to your circumstances, timeframe, and the outcome you want to achieve.',
+    title: 'Strategic Roadmap',
+    description: 'You receive a focused view of your options, the recommended path forward, and the practical steps ahead.',
   },
   {
-    title: 'Steady Representation',
-    description: 'We guide your matter forward with responsive communication, practical advice, and careful preparation.',
+    title: 'Focused Execution',
+    description: 'We move the matter with calm preparation, responsive communication, and consistent attention to detail.',
   },
 ];

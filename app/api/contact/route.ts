@@ -51,7 +51,7 @@ export async function POST(request: Request) {
     );
   }
 
-  console.info('Legal Summit contact enquiry received', {
+  console.info('Summit Legal Partner contact enquiry received', {
     fullName,
     email,
     phone,

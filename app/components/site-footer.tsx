@@ -1,17 +1,20 @@
 import Link from 'next/link';
-import { firmInfo, navigationItems } from '../lib/site-data';
+import { firmInfo, navigationItems, siteDescription, siteName, siteTagline } from '../lib/site-data';
 import SiteLogo from './site-logo';
 
 export default function SiteFooter() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="border-t border-[#e6d8c3] bg-[#f6efe4] text-[#5b4b3b]">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 sm:px-8 lg:grid-cols-[1.1fr_0.9fr_0.8fr] lg:px-10">
+    <footer className="border-t border-[#e7ddce] bg-white text-[#5b4b3b]">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 sm:px-8 lg:grid-cols-[1.15fr_0.85fr_0.8fr] lg:px-10">
         <div>
           <SiteLogo href="/" size="footer" />
-          <h2 className="mt-4 font-serif text-3xl text-[#20170f]">About Legal Summit Law Firm</h2>
-          <p className="site-text-muted mt-4 max-w-xl leading-8">
-            We are based in Bristol and provide trusted legal advice, professional representation, and attentive client care for clients across the United Kingdom.
+          <p className="mt-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#a57c49]">{siteTagline}</p>
+          <p className="site-text-muted mt-5 max-w-xl leading-8">
+            {siteDescription}
           </p>
+          <div className="site-pill mt-6">{firmInfo.location}</div>
         </div>
 
         <div>
@@ -36,8 +39,8 @@ export default function SiteFooter() {
         </div>
       </div>
 
-      <div className="border-t border-[#e6d8c3] px-6 py-6 text-center text-sm text-[#8b755b] sm:px-8 lg:px-10">
-        Copyright © 2026 Legal Summit Law Firm
+      <div className="border-t border-[#e7ddce] px-6 py-6 text-center text-sm text-[#8b755b] sm:px-8 lg:px-10">
+        Copyright © {currentYear} {siteName}
       </div>
     </footer>
   );

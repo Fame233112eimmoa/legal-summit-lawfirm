@@ -15,7 +15,7 @@ const initialValues: FormValues = {
   fullName: '',
   email: '',
   phone: '',
-  practiceArea: 'Family Law',
+  practiceArea: practiceAreaItems[0]?.title ?? '',
   message: '',
 };
 
@@ -79,7 +79,7 @@ export default function ContactForm() {
             type="text"
             value={formValues.fullName}
             onChange={handleChange}
-            className="w-full rounded-2xl border border-[#dccab1] bg-white/90 px-4 py-3 text-[#211812] outline-none transition placeholder:text-[#8b765e] focus:border-[#c9892d] focus:ring-2 focus:ring-[#c9892d]/20"
+            className="site-input"
             placeholder="Your full name"
           />
         </label>
@@ -93,8 +93,8 @@ export default function ContactForm() {
             type="email"
             value={formValues.email}
             onChange={handleChange}
-            className="w-full rounded-2xl border border-[#dccab1] bg-white/90 px-4 py-3 text-[#211812] outline-none transition placeholder:text-[#8b765e] focus:border-[#c9892d] focus:ring-2 focus:ring-[#c9892d]/20"
-            placeholder="name@example.co.uk"
+            className="site-input"
+            placeholder="name@example.com"
           />
         </label>
 
@@ -106,7 +106,8 @@ export default function ContactForm() {
             type="tel"
             value={formValues.phone}
             onChange={handleChange}
-            className="w-full rounded-2xl border border-[#dccab1] bg-white/90 px-4 py-3 text-[#211812] outline-none transition placeholder:text-[#8b765e] focus:border-[#c9892d] focus:ring-2 focus:ring-[#c9892d]/20"
+            className="site-input"
+            placeholder="+1 (702) 000-0000"
           />
         </label>
 
@@ -117,7 +118,7 @@ export default function ContactForm() {
             name="practiceArea"
             value={formValues.practiceArea}
             onChange={handleChange}
-            className="w-full rounded-2xl border border-[#dccab1] bg-white/90 px-4 py-3 text-[#211812] outline-none transition focus:border-[#c9892d] focus:ring-2 focus:ring-[#c9892d]/20"
+            className="site-input"
           >
             {practiceAreaItems.map((practiceArea) => (
               <option key={practiceArea.title} value={practiceArea.title}>
@@ -136,13 +137,13 @@ export default function ContactForm() {
           rows={6}
           value={formValues.message}
           onChange={handleChange}
-          className="w-full rounded-3xl border border-[#dccab1] bg-white/90 px-4 py-3 text-[#211812] outline-none transition placeholder:text-[#8b765e] focus:border-[#c9892d] focus:ring-2 focus:ring-[#c9892d]/20"
-          placeholder="Briefly describe your legal matter and the support you need."
+          className="site-input min-h-[168px] rounded-[1.6rem]"
+          placeholder="Briefly describe your matter, your priorities, and any timing concerns."
         />
       </label>
 
       <p className="site-text-soft mt-4 text-sm leading-6">
-        By submitting this form, you agree to be contacted about your enquiry. All information is handled with care and discretion.
+        By submitting this form, you agree to be contacted about your enquiry. All information is handled with care, discretion, and professional attention.
       </p>
 
       {feedback ? (
@@ -160,9 +161,9 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="mt-6 inline-flex items-center justify-center rounded-full bg-[#c9892d] px-6 py-3 text-base font-semibold text-white transition hover:bg-[#b97b21] disabled:cursor-not-allowed disabled:opacity-70"
+        className="site-button-primary mt-6 disabled:cursor-not-allowed disabled:opacity-70"
       >
-        {isSubmitting ? 'Sending Request...' : 'Request Appointment'}
+        {isSubmitting ? 'Sending Request...' : 'Schedule Consultation'}
       </button>
     </form>
   );

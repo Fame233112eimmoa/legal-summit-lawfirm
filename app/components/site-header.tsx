@@ -9,7 +9,6 @@ import SiteLogo from './site-logo';
 export default function SiteHeader() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isHomePage = pathname === '/';
   const items = navigationItems;
 
   useEffect(() => {
@@ -24,34 +23,14 @@ export default function SiteHeader() {
     };
   }, [isMenuOpen]);
 
-  const containerClassName = isHomePage
-    ? 'mx-auto mt-4 flex max-w-7xl items-center justify-between gap-6 rounded-[2rem] border border-[#e4d6c1]/80 bg-[#fffaf3]/90 px-6 py-6 shadow-[0_18px_45px_rgba(97,73,39,0.08)] backdrop-blur sm:px-8 lg:px-10 lg:mt-6 lg:py-7'
-    : 'mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 sm:px-8 lg:px-10';
-
-  const headerClassName = isHomePage
-    ? 'absolute inset-x-0 top-0 z-40'
-    : 'sticky top-0 z-40 border-b border-[#e6d8c3] bg-[#fffaf3]/95 backdrop-blur';
-
-  const desktopNavClassName = isHomePage
-    ? 'hidden items-center gap-6 text-[0.95rem] font-medium text-[#3f3127] lg:flex xl:gap-8'
-    : 'hidden items-center gap-5 text-sm font-medium text-[#5b4b3f] lg:flex xl:gap-6';
-
-  const desktopButtonClassName = isHomePage
-    ? 'hidden lg:inline-flex items-center justify-center rounded-full bg-[#c9892d] px-8 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#b97b21]'
-    : 'hidden lg:inline-flex items-center justify-center rounded-full bg-[#c9892d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#b97b21]';
-
-  const mobileToggleClassName = isHomePage
-    ? 'inline-flex h-11 w-11 items-center justify-center border border-[#d8c6ad] bg-white/80 text-[#46372c] transition hover:border-[#c9892d] hover:text-[#c9892d] lg:hidden'
-    : 'inline-flex h-11 w-11 items-center justify-center border border-[#d8c6ad] bg-white/80 text-[#5b4b3f] transition hover:border-[#c9892d] hover:text-[#c9892d] lg:hidden';
-
   return (
     <>
-      <header className={headerClassName}>
-        <div className={containerClassName}>
-          <SiteLogo href="/" priority size={isHomePage ? 'hero' : 'header'} />
+      <header className="sticky top-0 z-50 border-b border-[#ebe0d0] bg-[rgba(252,250,246,0.92)] backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 sm:px-8 lg:px-10">
+          <SiteLogo href="/" priority size="header" />
 
           <div className="hidden lg:flex lg:items-center lg:gap-6 xl:gap-8">
-            <nav className={desktopNavClassName}>
+            <nav className="hidden items-center gap-6 text-[0.95rem] font-medium text-[#584a3c] lg:flex xl:gap-8">
               {items.map((item) => {
                 const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
 
@@ -59,7 +38,7 @@ export default function SiteHeader() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`transition hover:text-[#b27b2e] ${isActive ? 'text-[#b27b2e]' : ''}`}
+                    className={`transition hover:text-[#9b7440] ${isActive ? 'text-[#9b7440]' : ''}`}
                   >
                     {item.label}
                   </Link>
@@ -67,15 +46,15 @@ export default function SiteHeader() {
               })}
             </nav>
 
-            <Link href="/contact" className={desktopButtonClassName}>
-              Request Appointment
+            <Link href="/contact" className="site-button-primary">
+              Schedule Consultation
             </Link>
           </div>
 
           <button
             type="button"
             onClick={() => setIsMenuOpen(true)}
-            className={mobileToggleClassName}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#d9c8b0] bg-white text-[#5b4a39] transition hover:border-[#be9761] hover:text-[#9b7440] lg:hidden"
             aria-label="Open navigation menu"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
@@ -88,7 +67,7 @@ export default function SiteHeader() {
       </header>
 
       <div
-        className={`fixed inset-0 z-40 bg-[#1d150d]/35 transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 z-40 bg-[#20170f]/25 transition-opacity duration-300 lg:hidden ${
           isMenuOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
         }`}
         onClick={() => setIsMenuOpen(false)}
@@ -97,17 +76,17 @@ export default function SiteHeader() {
 
       <aside
         id="mobile-navigation"
-        className={`fixed inset-y-0 right-0 z-50 flex w-full max-w-[22rem] flex-col bg-[#fffaf3] px-6 py-6 text-[#221811] shadow-[0_0_50px_rgba(87,64,36,0.18)] transition-transform duration-300 lg:hidden ${
+        className={`fixed inset-y-0 right-0 z-50 flex w-full max-w-[22rem] flex-col bg-[#fcfaf6] px-6 py-6 text-[#221811] shadow-[0_0_50px_rgba(87,64,36,0.14)] transition-transform duration-300 lg:hidden ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         aria-hidden={!isMenuOpen}
       >
-        <div className="flex items-start justify-between gap-4 border-b border-[#e7d9c3] pb-5">
+        <div className="flex items-start justify-between gap-4 border-b border-[#eadfcf] pb-5">
           <SiteLogo href="/" size="header" />
           <button
             type="button"
             onClick={() => setIsMenuOpen(false)}
-            className="inline-flex h-11 w-11 items-center justify-center border border-[#dcc8aa] text-[#6c5948] transition hover:border-[#c9892d] hover:text-[#c9892d]"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#dcc8aa] text-[#6c5948] transition hover:border-[#be9761] hover:text-[#9b7440]"
             aria-label="Close navigation menu"
           >
             <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 fill-current">
@@ -124,8 +103,8 @@ export default function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`border-b border-[#eee1d0] py-4 text-base font-medium transition hover:text-[#b27b2e] ${
-                  isActive ? 'text-[#b27b2e]' : 'text-[#4c3d31]'
+                className={`border-b border-[#f0e7da] py-4 text-base font-medium transition hover:text-[#9b7440] ${
+                  isActive ? 'text-[#9b7440]' : 'text-[#4c3d31]'
                 }`}
               >
                 {item.label}
@@ -136,9 +115,9 @@ export default function SiteHeader() {
 
         <Link
           href="/contact"
-          className="mt-8 inline-flex items-center justify-center rounded-full bg-[#c9892d] px-6 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#b97b21]"
+          className="site-button-primary mt-8"
         >
-          Request Appointment
+          Schedule Consultation
         </Link>
       </aside>
     </>

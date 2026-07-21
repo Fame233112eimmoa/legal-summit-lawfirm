@@ -1,17 +1,28 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { markLogo, siteName, wordmarkLogo } from '../lib/site-data';
 
 type SiteLogoProps = {
   framed?: boolean;
   href?: string;
   priority?: boolean;
-  size?: 'footer' | 'header' | 'hero';
+  size?: 'badge' | 'footer' | 'header' | 'hero';
+  variant?: 'mark' | 'wordmark';
 };
 
 const logoSizes = {
-  header: 'h-[64px] w-[100px] sm:h-[72px] sm:w-[114px]',
-  footer: 'h-[92px] w-[146px] sm:h-[104px] sm:w-[164px]',
-  hero: 'h-[96px] w-[152px] sm:h-[108px] sm:w-[171px] lg:h-[124px] lg:w-[196px]',
+  mark: {
+    badge: 'h-[96px] w-[96px] sm:h-[116px] sm:w-[116px]',
+    footer: 'h-[112px] w-[112px] sm:h-[128px] sm:w-[128px]',
+    header: 'h-[62px] w-[62px]',
+    hero: 'h-[160px] w-[160px] sm:h-[200px] sm:w-[200px] lg:h-[240px] lg:w-[240px]',
+  },
+  wordmark: {
+    badge: 'h-[60px] w-[224px]',
+    footer: 'h-[80px] w-[320px] sm:h-[92px] sm:w-[370px]',
+    header: 'h-[48px] w-[220px] sm:h-[54px] sm:w-[250px]',
+    hero: 'h-[70px] w-[300px] sm:h-[82px] sm:w-[350px] lg:h-[94px] lg:w-[404px]',
+  },
 };
 
 export default function SiteLogo({
@@ -19,21 +30,25 @@ export default function SiteLogo({
   href = '/',
   priority = false,
   size = 'header',
+  variant = 'wordmark',
 }: SiteLogoProps) {
+  const source = variant === 'mark' ? markLogo : wordmarkLogo;
+  const alt = variant === 'mark' ? `${siteName} emblem` : siteName;
+
   const logo = (
     <div
       className={`inline-flex items-center justify-center overflow-hidden ${
-        framed ? 'rounded-2xl bg-white px-3 py-2 shadow-soft sm:px-4 sm:py-2.5' : ''
+        framed ? 'rounded-[2rem] border border-[#e6dac7] bg-white p-4 shadow-[0_16px_40px_rgba(92,67,37,0.08)]' : ''
       }`}
     >
-      <div className={`relative ${logoSizes[size]}`}>
+      <div className={`relative ${logoSizes[variant][size]}`}>
         <Image
-          src="/legal-summit-logo-transparent-v4.png"
-          alt="Legal Summit Law Firm"
+          src={source}
+          alt={alt}
           fill
           priority={priority}
           className="object-contain"
-          sizes={size === 'hero' ? '196px' : size === 'header' ? '114px' : '164px'}
+          sizes={variant === 'mark' ? '240px' : size === 'hero' ? '404px' : size === 'footer' ? '370px' : '250px'}
         />
       </div>
     </div>
@@ -44,7 +59,7 @@ export default function SiteLogo({
   }
 
   return (
-    <Link href={href} className="inline-flex max-w-full items-center" aria-label="Legal Summit Law Firm home">
+    <Link href={href} className="inline-flex max-w-full items-center" aria-label={`${siteName} home`}>
       {logo}
     </Link>
   );

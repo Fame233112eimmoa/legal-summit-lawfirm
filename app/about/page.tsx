@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageBanner from '../components/page-banner';
-import { aboutImage, overviewPoints, processSteps, reasons, stats, statsImage } from '../lib/site-data';
+import { overviewPoints, processSteps, reasons, stats } from '../lib/site-data';
 
 export const metadata: Metadata = {
-  title: 'About | Legal Summit Law Firm',
-  description: 'Learn more about Legal Summit Law Firm, our client care, and our approach to legal representation in the United Kingdom.',
+  title: 'About',
+  description: 'Learn more about Summit Legal Partner, our Las Vegas positioning, and our premium approach to legal service.',
   alternates: {
     canonical: '/about',
   },
@@ -13,71 +13,48 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="bg-[#f7f1e8] text-[#211b14]">
+    <main className="text-[#211b14]">
       <PageBanner
-        title="Professional and Experienced Solicitors You Can Trust"
-        description="Learn more about our approach to legal advice, client care, confidentiality, and practical representation across the United Kingdom."
-        image={aboutImage}
+        eyebrow="About Summit Legal Partner"
+        title="A simpler, more premium standard for legal service in Las Vegas."
+        description="Summit Legal Partner was reimagined to feel cleaner, calmer, and more direct, without losing the strategic depth serious legal work requires."
       />
 
-      <section className="bg-[#f7f1e8] py-24">
-        <div className="mx-auto grid max-w-7xl gap-14 px-6 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-10">
+      <section className="px-6 py-24 sm:px-8 lg:px-10 lg:py-28">
+        <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
-            <p className="section-label">About Our Firm</p>
-            <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[2.9rem]">Legal Summit Law Firm</h2>
+            <p className="section-label">Our Positioning</p>
+            <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[3.2rem]">
+              We combine strategic legal thinking with a more intentional client experience.
+            </h2>
             <p className="site-text-muted mt-6 text-lg leading-8">
-              Legal Summit Law Firm is based in Bristol and is committed to delivering clear, careful, and professional legal
-              guidance for individuals, families, and businesses throughout the United Kingdom. We focus on practical advice that
-              helps clients make confident, informed decisions at important moments.
+              Our move to Las Vegas marked more than a new location. It created an opportunity to rebuild the firm around clearer
+              communication, stronger presentation, and a more premium way of serving clients with business, family, and private legal
+              needs.
             </p>
             <p className="site-text-muted mt-4 text-lg leading-8">
-              Our work is shaped by responsiveness, confidentiality, and a strong sense of client care. Whether you need support with
-              a personal matter, a family issue, or a dispute requiring structured representation, we aim to provide dependable advice
-              with close attention to detail.
+              We believe excellent counsel should feel composed and practical. That means thoughtful preparation, measured advice,
+              direct access, and a process that helps clients stay oriented even when the matter itself is complex or time-sensitive.
             </p>
             <div className="mt-8 space-y-4">
               {overviewPoints.map((point) => (
                 <div key={point} className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#c9892d]" />
+                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#be9761]" />
                   <p className="site-text-muted text-base leading-7">{point}</p>
                 </div>
               ))}
             </div>
             <div className="mt-8">
-              <Link
-                href="/team"
-                className="inline-flex items-center justify-center rounded-full border border-[#c9892d] px-6 py-3 text-base font-semibold text-[#8c631d] transition hover:bg-[#c9892d] hover:text-white"
-              >
+              <Link href="/team" className="site-button-secondary">
                 Meet Our Team
               </Link>
             </div>
           </div>
 
           <div className="grid gap-6">
-            {processSteps.map((step, index) => (
-              <div key={step.title} className="site-card p-8">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#efe4d4] font-serif text-xl text-[#b27b2e]">
-                  {`0${index + 1}`}
-                </div>
-                <h3 className="mt-6 font-serif text-2xl text-[#20170f]">{step.title}</h3>
-                <p className="site-text-muted mt-4 leading-8">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#fbf6ee] py-24">
-        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-          <div className="max-w-3xl">
-            <p className="section-label">Why Clients Choose Us</p>
-            <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[2.9rem]">Committed to service, clarity, and results</h2>
-          </div>
-
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {reasons.map((reason) => (
               <div key={reason.title} className="site-card-solid p-8">
-                <h3 className="font-serif text-2xl text-[#20170f]">{reason.title}</h3>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#a57c49]">{reason.title}</p>
                 <p className="site-text-muted mt-4 leading-8">{reason.description}</p>
               </div>
             ))}
@@ -85,25 +62,39 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-24 text-[#20170f]">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${statsImage})` }} />
-        <div className="absolute inset-0 bg-[rgba(250,243,232,0.82)]" />
-        <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="border-y border-[#ece2d4] bg-white px-6 py-24 sm:px-8 lg:px-10 lg:py-28">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="section-label">How We Work</p>
+            <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[3.2rem]">
+              Every matter moves through a clear three-step framework.
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {processSteps.map((step, index) => (
+              <article key={step.title} className="site-card-solid p-8">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#f3eadf] font-serif text-lg text-[#9b7440]">
+                  {`0${index + 1}`}
+                </div>
+                <h3 className="mt-6 font-serif text-2xl text-[#20170f]">{step.title}</h3>
+                <p className="site-text-muted mt-4 leading-8">{step.description}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map(([value, label]) => (
-              <div key={label} className="rounded-[1.75rem] border border-[#ded0bd] bg-white/60 p-8 text-center backdrop-blur-sm">
-                <p className="font-serif text-5xl text-[#b27b2e]">{value}</p>
+              <div key={label} className="site-card-soft p-6 text-center">
+                <p className="font-serif text-5xl text-[#9b7440]">{value}</p>
                 <p className="mt-4 text-sm uppercase tracking-[0.22em] text-[#6a5843]">{label}</p>
               </div>
             ))}
           </div>
 
           <div className="mt-14 text-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-[#c9892d] px-7 py-3.5 text-base font-semibold text-white transition hover:bg-[#b97b21]"
-            >
-              Request Appointment
+            <Link href="/contact" className="site-button-primary">
+              Schedule Consultation
             </Link>
           </div>
         </div>

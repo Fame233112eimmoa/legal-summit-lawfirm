@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import PageBanner from '../components/page-banner';
-import { firmInfo, heroImage, teamMembers } from '../lib/site-data';
+import { firmInfo, teamMembers } from '../lib/site-data';
 
 export const metadata: Metadata = {
-  title: 'Team | Legal Summit Law Firm',
-  description: 'Meet the Legal Summit Law Firm team serving clients from Bristol across the United Kingdom.',
+  title: 'Team',
+  description: 'Meet the team behind Summit Legal Partner and our Las Vegas-based approach to legal service.',
   alternates: {
     canonical: '/team',
   },
@@ -12,30 +12,29 @@ export const metadata: Metadata = {
 
 export default function TeamPage() {
   return (
-    <main className="bg-[#f7f1e8] text-[#211b14]">
+    <main className="text-[#211b14]">
       <PageBanner
+        eyebrow="Our Team"
         title="Meet Our Team"
-        description="Get to know the people behind Legal Summit Law Firm through a clean overview of roles, responsibilities, and firm support."
-        image={heroImage}
+        description="The people behind Summit Legal Partner are organized around strategy, responsiveness, and a more personal standard of legal support."
       />
 
-      <section className="bg-[#f7f1e8] py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
+      <section className="px-6 py-24 sm:px-8 lg:px-10 lg:py-28">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <p className="section-label">Our People</p>
-            <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[2.9rem]">
-              A Bristol-based team focused on clear legal support
+            <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[3.2rem]">
+              A Las Vegas-based team built for focused counsel and polished execution.
             </h2>
             <p className="site-text-muted mt-6 text-lg leading-8">
-              This page introduces the people behind your firm, from legal staff to leadership and administrative support. The
-              layout is designed to present your team clearly without relying on portraits, keeping the focus on role, experience,
-              and the support each person provides.
+              We keep the team presentation straightforward because that reflects how we like to work: clear roles, direct access,
+              and thoughtful support at every stage of the client relationship.
             </p>
-            <div className="mt-6 rounded-[1.75rem] border border-[#c9892d]/25 bg-[#fffaf2] px-6 py-5 shadow-[0_18px_45px_rgba(97,73,39,0.06)]">
+            <div className="site-card-soft mt-6 px-6 py-5">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b27b2e]">Team Overview</p>
               <p className="mt-3 text-sm leading-7 text-[#5e5144]">
-                Each team member is shown in a structured legal profile card with their name, position, and a short summary of their
-                responsibilities within the firm.
+                Each profile is intentionally concise so the focus stays on decision-making, service quality, and the role each team
+                member plays in moving matters forward.
               </p>
             </div>
           </div>
@@ -64,11 +63,11 @@ export default function TeamPage() {
         </div>
       </section>
 
-      <section className="bg-[#fbf6ee] py-24">
-        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+      <section className="border-y border-[#ece2d4] bg-white px-6 py-24 sm:px-8 lg:px-10 lg:py-28">
+        <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="section-label">Staff Profiles</p>
-            <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[2.9rem]">The team behind Legal Summit Law Firm</h2>
+            <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[3.2rem]">The people behind Summit Legal Partner</h2>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -81,8 +80,8 @@ export default function TeamPage() {
                 <div className="mt-6 border-t border-[#e6d8c3] pt-5">
                   <p className="text-sm font-medium text-[#4d3d30]">Legal Information</p>
                   <p className="site-text-muted mt-2 text-sm leading-7">
-                    Works as part of Legal Summit Law Firm&apos;s Bristol team, supporting client service, matter preparation, and
-                    professional case handling.
+                    Supports Summit Legal Partner&apos;s client service, matter preparation, and strategic coordination across active
+                    engagements.
                   </p>
                 </div>
               </article>
@@ -91,25 +90,18 @@ export default function TeamPage() {
         </div>
       </section>
 
-      <section className="bg-[#f2eadf] py-24">
+      <section className="px-6 py-24 sm:px-8 lg:px-10 lg:py-28">
         <div className="mx-auto max-w-5xl px-6 text-center sm:px-8 lg:px-10">
           <p className="section-label">Need To Reach Us?</p>
-          <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[2.9rem]">Speak with our Bristol team today</h2>
+          <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[3.2rem]">Speak with our Las Vegas team today</h2>
           <p className="site-text-muted mt-5 text-lg leading-8">
-            If you would like to request a consultation or expand these staff profiles with more personalised legal background, the
-            page is ready for the next update.
+            If you are ready to talk through a matter, we can arrange a consultation and outline the best next step.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href={firmInfo.phoneLink}
-              className="inline-flex items-center justify-center rounded-full bg-[#c9892d] px-7 py-3.5 text-base font-semibold text-white transition hover:bg-[#b97b21]"
-            >
+            <a href={firmInfo.phoneLink} className="site-button-primary">
               Call {firmInfo.phone}
             </a>
-            <a
-              href={`mailto:${firmInfo.email}`}
-              className="inline-flex items-center justify-center rounded-full border border-[#c9892d] px-7 py-3.5 text-base font-semibold text-[#8c631d] transition hover:bg-[#c9892d] hover:text-white"
-            >
+            <a href={`mailto:${firmInfo.email}`} className="site-button-secondary">
               Email the Firm
             </a>
           </div>

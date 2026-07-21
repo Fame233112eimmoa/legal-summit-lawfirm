@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageBanner from '../components/page-banner';
-import { heroImage, practiceAreaItems } from '../lib/site-data';
+import { practiceAreaItems, reasons } from '../lib/site-data';
 
 export const metadata: Metadata = {
-  title: 'Practice Areas | Legal Summit Law Firm',
-  description: 'Explore the legal services offered by Legal Summit Law Firm across family, personal, and estate-related matters.',
+  title: 'Practice Areas',
+  description: 'Explore the core practice areas Summit Legal Partner supports across business, private, and strategic legal matters.',
   alternates: {
     canonical: '/practice-areas',
   },
@@ -13,20 +13,23 @@ export const metadata: Metadata = {
 
 export default function PracticeAreasPage() {
   return (
-    <main className="bg-[#f7f1e8] text-[#211b14]">
+    <main className="text-[#211b14]">
       <PageBanner
-        title="Areas of Expertise We Cover"
-        description="Explore the legal matters we support, with practical advice and careful representation tailored to each client."
-        image={heroImage}
+        eyebrow="Practice Areas"
+        title="Legal services selected for clarity, complexity, and real-world impact."
+        description="We focus on matters where thoughtful strategy, careful communication, and disciplined execution create meaningful value for the client."
       />
 
-      <section className="bg-[#f7f1e8] py-24">
-        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+      <section className="px-6 py-24 sm:px-8 lg:px-10 lg:py-28">
+        <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="section-label">Practice Areas</p>
-            <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[2.9rem]">Dedicated support across key legal issues</h2>
+            <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[3.2rem]">
+              Dedicated support across the legal issues that most often define a turning point.
+            </h2>
             <p className="site-text-muted mt-5 text-lg leading-8">
-              We provide structured advice, sensitive client care, and dependable representation across a range of legal matters affecting individuals and families.
+              Whether the matter is commercial, personal, or highly sensitive, our role is to bring structure, calm, and a strategic
+              plan that fits the stakes.
             </p>
           </div>
 
@@ -42,19 +45,29 @@ export default function PracticeAreasPage() {
         </div>
       </section>
 
-      <section className="bg-[#fbf6ee] py-24">
-        <div className="mx-auto max-w-5xl px-6 text-center sm:px-8 lg:px-10">
-          <p className="section-label">Need Specific Advice?</p>
-          <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[2.9rem]">Speak with our team about your legal matter</h2>
-          <p className="site-text-muted mt-5 text-lg leading-8">
-            If your issue is urgent or requires tailored guidance, we can arrange a consultation and outline the next practical steps.
-          </p>
-          <Link
-            href="/contact"
-            className="mt-8 inline-flex items-center justify-center rounded-full bg-[#c9892d] px-7 py-3.5 text-base font-semibold text-white transition hover:bg-[#b97b21]"
-          >
-            Request Appointment
-          </Link>
+      <section className="border-y border-[#ece2d4] bg-white px-6 py-24 sm:px-8 lg:px-10 lg:py-28">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="section-label">What You Can Expect</p>
+            <h2 className="mt-5 font-serif text-4xl leading-tight text-[#20170f] sm:text-[3.2rem]">
+              The same level of care, whatever the practice area.
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {reasons.map((reason) => (
+              <article key={reason.title} className="site-card-soft p-8">
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#a57c49]">{reason.title}</p>
+                <p className="site-text-muted mt-4 leading-8">{reason.description}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-14 text-center">
+            <Link href="/contact" className="site-button-primary">
+              Schedule Consultation
+            </Link>
+          </div>
         </div>
       </section>
     </main>

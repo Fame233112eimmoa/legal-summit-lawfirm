@@ -1,21 +1,24 @@
 import type { Metadata } from 'next';
 import SiteFooter from './components/site-footer';
 import SiteHeader from './components/site-header';
+import { firmInfo, siteDescription, siteDomain, siteName, wordmarkLogo } from './lib/site-data';
 import './globals.css';
 
 const legalServiceSchema = {
   '@context': 'https://schema.org',
   '@type': 'LegalService',
-  name: 'Legal Summit Law Firm',
-  url: 'https://legalsummitlawfirm.com',
-  logo: 'https://legalsummitlawfirm.com/logo.png',
-  telephone: '+1-725-238-1725',
-  email: 'info@legalsummitlawfirm.com',
+  name: siteName,
+  url: siteDomain,
+  logo: `${siteDomain}${wordmarkLogo}`,
+  telephone: firmInfo.phoneLink.replace('tel:', ''),
+  email: firmInfo.email,
   address: {
     '@type': 'PostalAddress',
-    addressCountry: 'United Kingdom',
+    addressLocality: 'Las Vegas',
+    addressRegion: 'NV',
+    addressCountry: 'US',
   },
-  areaServed: 'United Kingdom',
+  areaServed: 'United States',
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -29,31 +32,35 @@ const legalServiceSchema = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Legal Summit Law Firm',
-  url: 'https://legalsummitlawfirm.com',
-  logo: 'https://legalsummitlawfirm.com/logo.png',
-  telephone: '+1-725-238-1725',
-  email: 'info@legalsummitlawfirm.com',
+  name: siteName,
+  url: siteDomain,
+  logo: `${siteDomain}${wordmarkLogo}`,
+  telephone: firmInfo.phoneLink.replace('tel:', ''),
+  email: firmInfo.email,
   address: {
     '@type': 'PostalAddress',
-    addressCountry: 'United Kingdom',
+    addressLocality: 'Las Vegas',
+    addressRegion: 'NV',
+    addressCountry: 'US',
   },
-  areaServed: 'United Kingdom',
+  areaServed: 'United States',
 };
 
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Legal Summit Law Firm',
-  alternateName: 'Legal Summit Law Firm',
-  url: 'https://legalsummitlawfirm.com/',
+  name: siteName,
+  alternateName: siteName,
+  url: `${siteDomain}/`,
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://legalsummitlawfirm.com'),
-  title: 'Legal Summit Law Firm | Solicitors & Legal Services',
-  description:
-    'Legal Summit Law Firm provides professional legal services, consultation, dispute resolution, corporate law, family law, and legal representation.',
+  metadataBase: new URL(siteDomain),
+  title: {
+    default: `${siteName} | Las Vegas Law Firm`,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
   alternates: {
     canonical: '/',
   },
@@ -62,12 +69,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: [
-      { url: '/logo.png', type: 'image/png', sizes: '512x512' },
-      { url: '/icon.png', type: 'image/png', sizes: '512x512' },
-    ],
+    icon: [{ url: '/icon.png', type: 'image/png', sizes: '512x512' }],
     apple: [{ url: '/apple-icon.png', type: 'image/png', sizes: '512x512' }],
-    shortcut: '/logo.png',
+    shortcut: '/icon.png',
   },
 };
 
@@ -77,7 +81,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-GB">
+    <html lang="en-US">
       <head>
         <script
           type="application/ld+json"
@@ -98,7 +102,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>
+      <body className="antialiased">
         <SiteHeader />
         {children}
         <SiteFooter />
